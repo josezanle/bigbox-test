@@ -1,5 +1,6 @@
+import Head from "next/head";
 import { NextSeo } from "next-seo";
-import "aos/dist/aos.css";
+
 import "../styles/globals.css";
 
 function MyApp({ Component, pageProps }) {
@@ -36,6 +37,9 @@ function MyApp({ Component, pageProps }) {
           site_name: "BigBox Challenge",
         }}
       />
+      <Head>
+        <link rel="icon" href="/icons/gem.svg" />
+      </Head>
     </>
   );
 }
