@@ -27,16 +27,21 @@ const Home = () => {
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
+            padding: 0 2em;
           }
           h2 {
             color: #4d58de;
             font-size: 2em;
           }
           h5 {
-            color: #feaa48;
+            background: #feaa48;
+            color: white;
+            padding: 0 3px;
+            font-size: 1.7em;
           }
           p {
             color: #1c1c1c;
+            font-size: 1.7em;
           }
         `}</style>
       </div>

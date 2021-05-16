@@ -1,3 +1,4 @@
+import Image from "next/image";
 import GoogleBtn from "../google-btn";
 
 const BookCard = ({ selectedCategory }) => {
@@ -6,7 +7,12 @@ const BookCard = ({ selectedCategory }) => {
       {selectedCategory.map((book, i) => (
         <div className="card" key={i}>
           <div className="image">
-            <img src={book.book_image} alt={book.title} />
+            <Image
+              src={book.book_image}
+              alt={book.title}
+              width={400}
+              height={300}
+            />
           </div>
           <div className="text">
             <h2>{book.title}</h2>
@@ -28,6 +34,7 @@ const BookCard = ({ selectedCategory }) => {
           justify-content: center;
           align-items: center;
           flex-wrap: wrap;
+          padding-right: 0.8em;
         }
         .card {
           width: 500px;
@@ -35,26 +42,24 @@ const BookCard = ({ selectedCategory }) => {
           display: flex;
           justify-content: center;
           align-items: center;
-          flex-wrap: wrap;
           border: 2px solid silver;
           box-shadow: 0.3em 0.3em 0.5em silver;
-          margin: 1em;
+          margin: 1em 0.5em;
           padding: 1em;
           background: white;
-          border-radius: 1em;
+          border-radius: 0.5em;
         }
         // ===============================
         .image {
           width: 100%;
           height: 100%;
           flex: 1;
-          display: flex;
         }
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
-          border-radius: 0.5em;
+          border-radius: 0.3em;
         }
         //===============================
         .text {
@@ -63,9 +68,9 @@ const BookCard = ({ selectedCategory }) => {
           flex: 1;
           padding-left: 0.5em;
           display: flex;
-          justify-content: center;
           flex-flow: column;
           position: relative;
+          background: white;
         }
         h2 {
           color: #f8ac30;
@@ -82,31 +87,66 @@ const BookCard = ({ selectedCategory }) => {
         .text p:nth-child(5) {
           padding: 0 0 0 0.5em;
           display: inline;
+          margin-bottom: 1em;
         }
         //================RESPONSIVE===================================
         @media (max-width: 520px) {
+          .book-card {
+            padding-right: 0.3em;
+          }
           .card {
-            width: 300px;
+            width: 500px;
             height: 550px;
             display: flex;
-            justify-content: center;
-            align-items: center;
             flex-flow: column;
-            flex-wrap: wrap;
+            padding: 0;
           }
           .image {
             width: 100%;
-            flex: 0;
-            height: 200px;
+            display: flex;
             display: flex;
             justify-content: center;
             align-items: center;
           }
+          img {
+            display: none;
+          }
           .text {
             width: 100%;
-            flex: 0;
-            height: 200px;
+            height: 300px;
+            padding-left: 0;
+            padding: 0.5em;
+            flex: 1;
+            justify-content: center;
+            background: hsla(0, 0%, 100%, 0.9);
+            border-radius: 0.5em;
           }
+        }
+        @media (max-width: 465px) {
+          .text {
+            height: 210px;
+          }
+          .text,
+          .image {
+            flex: 0;
+          }
+          .image{
+            margin-bottom:1em;
+            }
+          }
+        }
+        @media (max-width: 372px) {
+          .text {
+            height: 210px;
+          }
+
+          h2 {
+            font-size: 1em;
+          }
+        }
+
+
+
         }
       `}</style>
     </div>
