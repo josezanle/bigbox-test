@@ -5,7 +5,7 @@ const BookCard = ({ selectedCategory }) => {
   return (
     <div className="book-card">
       {selectedCategory.map((book, i) => (
-        <div className="card" key={i} data-aos="fade-down">
+        <div className="card" key={i}>
           <div className="image">
             <Image
               src={book.book_image}
