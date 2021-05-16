@@ -63,6 +63,7 @@ const BookCard = ({ selectedCategory }) => {
           flex: 1;
           padding-left: 0.5em;
           display: flex;
+          justify-content: center;
           flex-flow: column;
           position: relative;
         }
@@ -81,6 +82,31 @@ const BookCard = ({ selectedCategory }) => {
         .text p:nth-child(5) {
           padding: 0 0 0 0.5em;
           display: inline;
+        }
+        //================RESPONSIVE===================================
+        @media (max-width: 520px) {
+          .card {
+            width: 300px;
+            height: 550px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: column;
+            flex-wrap: wrap;
+          }
+          .image {
+            width: 100%;
+            flex: 0;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          .text {
+            width: 100%;
+            flex: 0;
+            height: 200px;
+          }
         }
       `}</style>
     </div>

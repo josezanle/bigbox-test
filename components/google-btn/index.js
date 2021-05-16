@@ -20,9 +20,8 @@ const GoogleBtn = ({ book }) => {
       <style jsx>{`
         .google-btn {
           cursor: pointer;
-          margin-top: 5px;
           width: 100%;
-          height: 42px;
+          height: 40px;
           background-color: #4285f4;
           border-radius: 2px;
           box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.25);
